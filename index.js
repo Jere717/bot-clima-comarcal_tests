@@ -27,6 +27,7 @@ const groq = new Groq(process.env.GROQ_API_KEY);
 const client = new Client({
   authStrategy: new LocalAuth({ dataPath: './sessions' }),
   puppeteer: {
+    // executablePath: '/usr/bin/chromium-browser',
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
